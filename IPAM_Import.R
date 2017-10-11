@@ -35,6 +35,10 @@ Import_YII<- function (dir, data.files="*.csv")  {
 # 5. Merge YII and sample info (optional)
   YII.data<-plyr::join(ID_AOI, YII, by =c("Date", "File", "variable"), type="inner")
   
+#6. Remove file info 
+  YII.data<-dplyr::select(YII.data, Date, ID, value)
+  colnames(YII.data) <- c("Date","ID", "YII")
+  
   return(YII.data)
   
 }
