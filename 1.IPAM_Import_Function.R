@@ -1,7 +1,7 @@
 # This function gets the YII values from different .csv files exported from ImagingPAM machines, and
 # consolidates the values in a single data frame
 
-# To add the specific sample information run the second script (2.SampleInformation.R)
+# To run the function and add the specific sample information run the second script (2.example.R)
 
       Import_YII<- function (dir)  {
        
